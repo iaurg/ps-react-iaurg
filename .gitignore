@@ -125,3 +125,15 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Built library
+/lib
+
+# Generated component data
+/config/componentData.js
+
+# Built docs
+/docs
+
+# VSCode launch configuration
+launch.json
