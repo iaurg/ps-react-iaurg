@@ -19,9 +19,7 @@ export default function Example(props) {
 
       <ExampleComponent></ExampleComponent>
       <p>
-        <a href="#" onClick={toggleCode}>
-          {showCode ? "Hide" : "Show"} Code
-        </a>
+        <button onClick={toggleCode}>{showCode ? "Hide" : "Show"} Code</button>
       </p>
 
       {showCode && code}

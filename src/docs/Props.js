@@ -31,4 +31,6 @@ export default function Props({ props }) {
   );
 }
 
-Props.propTypes = {};
+Props.propTypes = {
+  props: PropTypes.object.isRequired,
+};

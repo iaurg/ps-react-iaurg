@@ -4,7 +4,7 @@ import ComponentPage from "./ComponentPage";
 import componentData from "../../config/componentData";
 
 export default function Docs() {
-  const [route, setRoute] = window.location.hash.substr(1);
+  const [route, setRoute] = useState(window.location.hash.substr(1));
 
   useEffect(() => {
     window.addEventListener("hashchange", () => {
