@@ -66,9 +66,9 @@
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "start:docs": "node scripts/start.js",
-    "build": "node scripts/build.js",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
+    "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
