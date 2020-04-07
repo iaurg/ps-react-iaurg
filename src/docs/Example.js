@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import CodeExample from "./CodeExample";
 export default function Example(props) {
-  const { code, description, name } = this.props.example;
-  const { componentName } = this.props;
+  const { code, description, name } = props.example;
+  const { componentName } = props;
   const [showCode, setShowCode] = useState(false);
   const ExampleComponent = require(`./examples/${componentName}/${name}`)
     .default;
@@ -22,7 +22,7 @@ export default function Example(props) {
         <button onClick={toggleCode}>{showCode ? "Hide" : "Show"} Code</button>
       </p>
 
-      {showCode && code}
+      {showCode && <CodeExample>{code}</CodeExample>}
     </div>
   );
 }
