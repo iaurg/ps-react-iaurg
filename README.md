@@ -2,7 +2,7 @@
 
 ## O que é um componente reutilizável?
 
-[!Componentes Reutilizaveis](./images/componentes-reutilizaveis.png)
+![Componentes Reutilizaveis](./images/componentes-reutilizaveis.png)
 
 O foco principal no conceito de componentes reutilizáveis é manter uma linha tênue entre utilidade e complexidade. Construir componentes que podem ser facilmente replicados, configurados e mantidos é uma qualidade que pode beneficiar um projeto ou biblioteca por completo.
 
@@ -42,7 +42,9 @@ Um componente rígido é menos customizável e possui uma quantidade menor de va
 A comparação entre um e outro é que quanto mais flexível mais complexo.
 
 Rigido                         Flexivel
+<br />
 ===================================>
+<br />
 Menos complexo                Mais complexo
 
 Normalmente componentes rígidos serão mais fáceis de criar e manter, menos opções e variações, menos código para administrar, rápido para criar, simples de entender, fácil de testar. E como componentes rígidos utilizam menos _props_ ficam mais fáceis de serem mantidos, props são fáceis de adicionar porém dificéis de remover quando o componente já está sendo utilizado no projeto.
