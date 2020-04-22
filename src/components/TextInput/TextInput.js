@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Label from "../Label";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Label from '../Label'
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-export default function TextInput({
+export default function TextInput ({
   htmlId,
   name,
   label,
-  type = "text",
+  type = 'text',
   required = false,
   onChange,
   placeholder,
@@ -26,17 +26,17 @@ export default function TextInput({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        style={error && { border: "solid 1px red" }}
+        style={error && { border: 'solid 1px red' }}
         {...props}
       />
       {children}
       {error && (
-        <div className="error" style={{ color: "red" }}>
+        <div className='error' style={{ color: 'red' }}>
           {error}
         </div>
       )}
     </div>
-  );
+  )
 }
 
 TextInput.propTypes = {
@@ -50,7 +50,7 @@ TextInput.propTypes = {
   label: PropTypes.string.isRequired,
 
   /** Input type */
-  type: PropTypes.oneOf(["text", "number", "password"]),
+  type: PropTypes.oneOf(['text', 'number', 'password']),
 
   /** Mark label with asterisk if set to true */
   required: PropTypes.bool,
@@ -68,5 +68,5 @@ TextInput.propTypes = {
   error: PropTypes.string,
 
   /** Child component to display next to the input */
-  children: PropTypes.node,
-};
+  children: PropTypes.node
+}
