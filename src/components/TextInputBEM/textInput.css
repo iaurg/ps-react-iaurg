@@ -1,0 +1,15 @@
+/*
+In real App use Sass, Less or PostCSS with cssnext
+*/
+
+.textinput{
+    margin-bottom: 16px;
+}
+
+.textinput__error{
+    color: red;
+}
+
+.textinput__input--state-error{
+    border: 1px solid red;
+}

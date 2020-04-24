@@ -107,3 +107,11 @@ Caso alguem passe uma `<div>` como children o seu componente terá um [erro na v
 7 - Sempre que possível foque em ter componentes que podem ser renderizados via Server Side Rendering, no caso de sites que se beneficiam dessa tecnologia. Isso fará com que você deixe de utilizar propriedades que dependam do navegador para serem funcionais como document, window, setTimeout...
 
 8 - Foque na responsabilidade de cada componente ter um propósito. Quanto maior e mais complexo for o componente mais difícil será administrá-lo. Componentes simples e diretos serão fáceis de editar, manter e criar.
+
+## Atomic Design
+
+### Átomos
+
+### Moléculas
+
+### Organismos
