@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import TextInput from '../TextInput'
 import PasswordInput from '../PasswordInput'
 
-/** Regisrationform with built-in validation */
+/** Registration form with built-in validation */
 export default function RegisrationForm ({ confirmationMessage = 'Thanks for registering', minPasswordLength = 8, ...props }) {
   const [submitted, setSubmitted] = useState(false)
   const [user, setUser] = useState({ email: '', password: '' })
@@ -72,7 +72,7 @@ export default function RegisrationForm ({ confirmationMessage = 'Thanks for reg
         />
 
         <input type='submit' value='Register' onClick={onSubmit} />
-        </div>
+      </div>
   )
 }
 
