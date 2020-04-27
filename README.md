@@ -109,9 +109,34 @@ Caso alguem passe uma `<div>` como children o seu componente terá um [erro na v
 8 - Foque na responsabilidade de cada componente ter um propósito. Quanto maior e mais complexo for o componente mais difícil será administrá-lo. Componentes simples e diretos serão fáceis de editar, manter e criar.
 
 ## Atomic Design
+![Atomic Design](./images/atomic-design.png)
+O conceito de _atomic design_ divide as estruturas em átomos, moléculas, organismos, templates e páginas. Criando uma hierarquia entre os elementos da interface e desacoplando cada um para que possam ser reutilizados de maneira eficiente. Essa conceito facilita a visualização e separação de componentes. Novamente o exemplo da indústria automobilistica se adequa aqui, um carro é um sistema construido com milhares de pequenas peças e sistemas em conjunto, podemos abstraí-lo como um sistema de átomos unidos.
 
 ### Átomos
+Os átomos são as menores frações de uma interface, normalmente se aproximam de tags HTML padrões. Podemos considerar átomos componentes de botões, inputs, títulos, ícone. Normalmente possuem responsabilidade única e são construidos sozinhos.
 
 ### Moléculas
+Moléculas podem ser interpretadas como a junção de 2+ átomos para criar um novo elemento. Como um botão com icone, ou um input seguido de um botão. O ideal é mantê-los com uma responsabilidade simples para que possam ser mesclados com outras moléculas facilmente.
 
 ### Organismos
+São grupos de moléculas e átomos trabalhando em conjunto para criar uma função específica, um organismo tende a ser mais complexo e estruturado. Um formulário completo, um cabeçalho com botões.
+
+## Formas de estilizar componentes
+Na criação de componentes reutilizáveis teremos a escolha de definir como iremos aplicar estilos aos componentes, quais padrões seguir, qual nivel de hierarquia. O padrão que for definido em seu projeto inicialmente pode beneficiar ou melhorar o fluxo de trabalho futuro.
+
+### CSS padrão
+Utilizar o CSS padrão na criação de componentes reutilizáveis pode ser aceitável caso haja um controle e separação de hierarquias bem definido ou seja um projeto pequeno. A utilização de algum padrão de nomenclatura como o BEM pode ajudar neste caso. Como muitos componentes e estilos são utilizados em uma mesma página é fácil um estilo global de um elemento afetar a hierarquia do outro e criar alguns problemas.
+
+### CSS Compilado
+Trabalhar com compiladores CSS lhe dará algumas funcionalidades para escrever o CSS de forma mais dinâmica. Variáveis, elementos atrelados, funções entre diversas outras melhorias agradam quem deseja criar projetos mais complexos. Pré-processadores irão garantir que você tenha um código adequado para diversas versões de navegadores e permitirão que você use funcionalidades mais recentes do CSS.
+
+### React Inline Styles
+Com essa abordagem o seu CSS estará extremamente próximo do componente e será escrito em JSX, existem algumas diferenças do CSS padrão, porém são facilmente aplicadas. Aqui o CSS será encapsulado e poderá ser escrito sem a preocupação de efeitos colaterais hierárquicos. Uma vantagem é poder trabalhar com propriedades e alterações de estados enviando mudanças para CSS. O que pode incomodar algumas pessoas é a utilização de estilos como objetos JavaScript.
+
+### CSS Modules
+A utilização de CSS Modules permite que você escreva CSS de forma padrão, SASS ou Less escopada para um elemento sem o risco de conflitos. A configuração do CSS Modules é feita em conjunto com o Webpack, essa configuração fará com que o Webpack crie um nome único para cada classe criada evitando conflito de nomes. Então você pode escrever o CSS de forma padrão sem se preocupar com o conflito de nomenclatura pois toda estilização se mantem no escopo do componente.
+
+### CSS no JS
+Existem diversas bibliotecas para se trabalhar com essa opção, porém a que está em destaque atualmente é o Styled Components que cria classes únicas com hashes para que evite o conflito de CSS, permite a inserção de manipulação via propriedades, você consegue criar tags semânticas estilizadas para replicá-las através do código.
+
+## Testando componentes
