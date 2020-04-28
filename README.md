@@ -154,3 +154,6 @@ Focado em testar a interatividade de seus componentes, como eles se comportam qu
 
 #### Testes estruturais
 Servem para validar se a estrutura de um componente está como o esperado. Normalmente utilizadas técnicas como snapshot para tirar uma "foto" do componente e comparar com versões futuras/passadas. Snapshot não são estruturados para se trabalhar pensando em TDD, eles são testados depois do desenvolvimento.
+
+### Continuos Integration (CI)
+A principal função de uma ferramenta de CI é garantir que o funcionamento do código estará de acordo em outra máquina. É uma forma de garantir a qualidade de código, testes e verificações serão realizadas automaticamente pelo servidor e retornarão um relatório para você, tendo assim um feedback mais rápido do funcionamento de sua aplicação no "mundo real". CI é uma verificação para garantir que o código novo que você escreveu não irá entrar em conflito com o código em produção.
