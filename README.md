@@ -140,3 +140,17 @@ A utilização de CSS Modules permite que você escreva CSS de forma padrão, SA
 Existem diversas bibliotecas para se trabalhar com essa opção, porém a que está em destaque atualmente é o Styled Components que cria classes únicas com hashes para que evite o conflito de CSS, permite a inserção de manipulação via propriedades, você consegue criar tags semânticas estilizadas para replicá-las através do código.
 
 ## Testando componentes
+Ao criar componente é importante se preocupar com testes para que você tenha uma estrutura que seja coerente no decorrer do desenvolvimento. Com testes você terá uma estrutura que lhe dará uma confiança durante o desenvolvimento. 
+
+No começo não se preocupe com qual framework utilizar para fazer o teste, apenas pegue um e faça. Foque em melhorar a estrutura e qualidade de seu código com testes, caso precise mudar de framework provavelmente serão similares.
+
+### Tipos de testes
+
+#### Testes unitários
+Esse tipo de teste focar em testar a menor porção do componente, normalmente utilizado para validar a lógica. O foco é validar lógicas, cálculos, funções do componente.
+
+#### Testes de interação
+Focado em testar a interatividade de seus componentes, como eles se comportam quando são utilizados. Coisas como garantir que um clique retorna o esperado ou uma mensagem aparece após o envio de um formulário.
+
+#### Testes estruturais
+Servem para validar se a estrutura de um componente está como o esperado. Normalmente utilizadas técnicas como snapshot para tirar uma "foto" do componente e comparar com versões futuras/passadas. Snapshot não são estruturados para se trabalhar pensando em TDD, eles são testados depois do desenvolvimento.
