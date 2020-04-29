@@ -157,3 +157,11 @@ Servem para validar se a estrutura de um componente está como o esperado. Norma
 
 ### Continuos Integration (CI)
 A principal função de uma ferramenta de CI é garantir que o funcionamento do código estará de acordo em outra máquina. É uma forma de garantir a qualidade de código, testes e verificações serão realizadas automaticamente pelo servidor e retornarão um relatório para você, tendo assim um feedback mais rápido do funcionamento de sua aplicação no "mundo real". CI é uma verificação para garantir que o código novo que você escreveu não irá entrar em conflito com o código em produção.
+
+### Formas de distribuição
+Ao desenvolver um pacote/módulo/biblioteca você precisará decidir como irá distribuir esse material, alguns dos pontos a se pensar podem ser:
+- Open Source, Privado ou Interno
+- Onde irá hospedar seus pacotes? (NPM, Yarn, Packagers...)
+- Tipo de importação (Named, Import from /lib, Package root)
+- Decidir como irá distribuir os arquivos (UMD, ES5 (CommonJS), ES Modules)
+- Hospedar a documentação
